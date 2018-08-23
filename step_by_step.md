@@ -37,7 +37,7 @@ use GUI_#1_images_to_TFrecord.ipynb, see details in the notebook
 Images should be consecutive frames exported by ResearchIR software.
 
 
-##Inference on TFrecord
+## Inference on TFrecord
 
 use inference\infer_detections.py
 
@@ -48,6 +48,8 @@ python inference\infer_detections.py
 --inference_graph=PATH_TO_MODEL.pb
 ```
 GUI#2 use this script, but can only display progress after completed.
+
+Use GUI_#3_process_detections.ipynb to read and visualize the inference record.
 
 ## Training models
 
@@ -90,7 +92,7 @@ python export_inference_graph.py
 --trained_checkpoint_prefix=PATH_FOR_TRAINING_FILES\model.ckpt-12345 
 --output_directory=PATH_OF_DESTINATION
 ```
-Note that you can compare the performances of checkpoints in Tensorboard.
+Note that you can compare the eval metrics of checkpoints in Tensorboard before choosing which one to use.
 
 
 
